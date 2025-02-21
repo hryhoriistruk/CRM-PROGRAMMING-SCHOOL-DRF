@@ -1,3 +1,23 @@
-from django.shortcuts import render
+from django.utils.decorators import method_decorator
 
-# Create your views here.
+from rest_framework import generics
+from rest_framework.filters import OrderingFilter
+
+from django_filters.rest_framework import DjangoFilterBackend
+from drf_yasg.utils import swagger_auto_schema
+
+from .filters import OrderFilter
+from .models import OrdersModel
+from .serializers import OrderSerializer
+
+
+@method_decorator(name='get', decorator=swagger_auto_schema(operation_id='get all orders'))
+class OrderListView(generics.ListAPIView):
+    '''
+        Show all orders
+    '''
+    queryset = OrdersModel.objects.all()
+    serializer_class = OrderSerializer
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filterset_class = OrderFilter
+
