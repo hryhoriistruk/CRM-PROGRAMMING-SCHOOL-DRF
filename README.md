@@ -44,5 +44,3 @@ To run the project in Docker, execute:
 docker-compose up --build
 ```
 
-## Author
-[Hryhorii Struk](https://github.com/hryhoriistruk)
