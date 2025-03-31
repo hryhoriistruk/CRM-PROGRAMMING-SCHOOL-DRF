@@ -23,8 +23,18 @@ class OrderListView(generics.ListAPIView):
     filter_backends = [DjangoFilterBackend, OrderingFilter]
     filterset_class = OrderFilter
 
+class AssignedOrderToManager(generics.GenericAPIView):
+    '''
+        Assign order to manager
+    '''
+    permission_classes = (IsAuthenticated,)
+    pass # todo
 
 class GetMyOrdersView(generics.RetrieveAPIView):
+    '''
+        show all orders of authenticated manager
+    '''
+    permission_classes = (IsAuthenticated,)
     pass # todo
 
 
