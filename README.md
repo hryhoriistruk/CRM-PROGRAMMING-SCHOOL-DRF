@@ -9,14 +9,14 @@ It allows managing students, courses, teachers, and class schedules.
 - **Authentication and authorization** via DRF
 - **API for client interactions**
 
-## Technologies
+# Technologies
 - Python 3
 - Django 4
 - Django Rest Framework
 - PostgreSQL
 - Docker
 
-##AUTH
+# AUTH
 
 I SendActivationEmail: sending an email to the user with a token to activate the account
 
@@ -30,7 +30,7 @@ Orders
 
 I OrderList: show all orders
 
-##USERS
+# USERS
 
 I ListCreateManager: create new user
 
