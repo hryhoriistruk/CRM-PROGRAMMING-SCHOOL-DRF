@@ -16,6 +16,30 @@ It allows managing students, courses, teachers, and class schedules.
 - PostgreSQL
 - Docker
 
+##AUTH
+
+I SendActivationEmail: sending an email to the user with a token to activate the account
+
+II ActivationManager: allows the activation of a user's account
+
+III RecoveryPasswordRequest: send a request to reset password
+
+IV RecoveryPassword: resets the password using the token
+
+Orders
+
+I OrderList: show all orders
+
+##USERS
+
+I ListCreateManager: create new user
+
+II ManagerBan: blocks the Manager
+
+III ManagerUnban: unlocks the Manager
+
+IV GetMe: get info about me (authenticated manager)
+
 ## Installation
 1. Clone the repository:
    ```bash
